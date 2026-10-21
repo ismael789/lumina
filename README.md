@@ -8,12 +8,7 @@ Biblioteca digital con catálogo de libros, buscador, registro seguro, videos ed
 2. Copia `.env.example` como `.env`.
 3. Coloca tu clave gratuita de OpenWeatherMap en `OPENWEATHER_API_KEY`.
 4. Personaliza `OPENWEATHER_CITY` si lo deseas.
-5. Ejecuta `npm start` y abre http://localhost:3000.
-
-## APIs externas
-
-- Open Library: catálogo de libros y portadas mediante `/api/libros`.
-- OpenWeatherMap: clima actual mediante `/api/clima`; la clave se lee solo desde `.env` y nunca se envía al navegador.
+5. Ejecuta `npm start` y abre http://localhost:3000
 
 ## Seguridad aplicada
 
