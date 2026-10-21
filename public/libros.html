@@ -1,0 +1,116 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17243b"><meta name="description" content="Explora el catálogo de Lúmina."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Catálogo | Lúmina</title><link rel="stylesheet" href="style.css"></head><body>
+
+<nav><b><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg> Librería Digital</b><a href="/">Inicio</a><a href="/libros.html">Catálogo</a><a href="/registro.html">Registro</a></nav>
+
+<main>
+
+<!-- ═══════ ENCABEZADO DEL CATÁLOGO ═══════ -->
+<section class="page-header">
+  <h1>
+    <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>
+    Catálogo de libros
+  </h1>
+  <p class="page-desc">Explora más de 20 millones de obras disponibles en Open Library. Busca por título, autor o cualquier tema de tu interés.</p>
+</section>
+
+<!-- ═══════ SUGERENCIAS RÁPIDAS ═══════ -->
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg>
+    Sugerencias populares
+  </h2>
+  <div class="tags">
+    <button class="tag" onclick="buscar('ciencia ficción')">Ciencia Ficción</button>
+    <button class="tag" onclick="buscar('historia de méxico')">Historia de México</button>
+    <button class="tag" onclick="buscar('programación')">Programación</button>
+    <button class="tag" onclick="buscar('novela romántica')">Novela Romántica</button>
+    <button class="tag" onclick="buscar('filosofía')">Filosofía</button>
+    <button class="tag" onclick="buscar('poesía')">Poesía</button>
+    <button class="tag" onclick="buscar('inteligencia artificial')">Inteligencia Artificial</button>
+    <button class="tag" onclick="buscar('psicología')">Psicología</button>
+  </div>
+</section>
+
+<!-- ═══════ BUSCADOR ═══════ -->
+<section class="seccion">
+  <form class="busca" id="b" style="max-width:none">
+    <input id="q" placeholder="Busca un título, autor o tema..." maxlength="80">
+    <button class="btn">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+      Buscar
+    </button>
+  </form>
+  <p id="estado"></p>
+</section>
+
+<!-- ═══════ RESULTADOS ═══════ -->
+<div class="grid" id="lista"></div>
+
+<!-- ═══════ ACERCA DE OPEN LIBRARY ═══════ -->
+<section class="seccion info-api">
+  <h2 class="seccion-titulo">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"/></svg>
+    ¿De dónde vienen los datos?
+  </h2>
+  <div class="contenido-doble">
+    <div class="texto-info">
+      <p>Todos los libros que ves provienen de <strong>Open Library</strong>, un proyecto del <strong>Internet Archive</strong> que cataloga cada libro jamás publicado.</p>
+      <ul>
+        <li><strong>Más de 20 millones</strong> de registros bibliográficos.</li>
+        <li><strong>API gratuita y abierta</strong> — no se requiere clave de acceso.</li>
+        <li><strong>Portadas, autores y ediciones</strong> vinculadas automáticamente.</li>
+        <li>Muchos libros están disponibles para <strong>lectura gratuita</strong> en Open Library.</li>
+      </ul>
+    </div>
+    <div class="video-container">
+      <iframe src="https://www.youtube-nocookie.com/embed/e8X-CDZQ-aw?controls=1&fs=1&rel=0&modestbranding=1&playsinline=1" title="La historia de la biblioteca" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ TIPS ═══════ -->
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg>
+    Tips de búsqueda
+  </h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Busca por autor</h3>
+      <p>Escribe el nombre de un autor como "Gabriel García Márquez" para ver todas sus obras disponibles.</p>
+    </div>
+    <div class="card">
+      <h3>Busca por tema</h3>
+      <p>Usa palabras clave como "astronomía", "recetas" o "desarrollo web" para encontrar libros de un tema específico.</p>
+    </div>
+    <div class="card">
+      <h3>Explora idiomas</h3>
+      <p>Open Library tiene libros en muchos idiomas. Prueba buscando en inglés o español para más resultados.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Lúmina — Proyecto Unidad 3 · Desarrollo Web Integral (UTSLRC)</p>
+  <p>Datos proporcionados por <a href="https://openlibrary.org" target="_blank" rel="noopener noreferrer" style="color:#7eb8ff">Open Library</a></p>
+</footer>
+
+<script>
+const lista=document.getElementById('lista'),estado=document.getElementById('estado');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+async function buscar(q){
+  document.getElementById('q').value=q;
+  estado.textContent='Cargando...';lista.innerHTML='';
+  try{const r=await fetch('/api/libros?q='+encodeURIComponent(q));const j=await r.json();
+  if(!r.ok){estado.textContent=j.error;return}
+  estado.textContent=j.libros.length?j.libros.length+' resultados encontrados':'Sin resultados.';
+  lista.innerHTML=j.libros.map(l=>'<div class="card">'+(l.portada?'<img src="'+esc(l.portada)+'" alt="Portada">':'')+'<h3>'+esc(l.titulo)+'</h3><small>'+esc(l.autores.join(', ')||'Autor desconocido')+'</small><p><small>'+esc(l.descripcion)+'</small></p><a href="'+esc(l.enlace)+'" target="_blank" rel="noopener noreferrer">Ver en Open Library →</a></div>').join('')}
+  catch{estado.textContent='Error de conexión.'}}
+document.getElementById('b').addEventListener('submit',e=>{e.preventDefault();buscar(q.value||'programación')});
+const initialQuery = new URLSearchParams(location.search).get('q') || 'programación';
+buscar(initialQuery);
+</script>
+<script src="theme.js"></script>
+</body></html>

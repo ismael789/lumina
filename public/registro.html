@@ -1,0 +1,132 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#17243b"><meta name="description" content="Crea tu cuenta en Lúmina."><link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Crear cuenta | Lúmina</title><link rel="stylesheet" href="style.css"></head><body>
+
+<nav><b><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg> Librería Digital</b><a href="/">Inicio</a><a href="/libros.html">Catálogo</a><a href="/registro.html">Registro</a></nav>
+
+<main>
+
+<!-- ═══════ ENCABEZADO ═══════ -->
+<section class="page-header" style="text-align:center">
+  <h1>
+    <svg class="icon icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"/></svg>
+    Crear cuenta
+  </h1>
+  <p class="page-desc">Regístrate gratis y accede a todas las funciones de Lúmina.</p>
+</section>
+
+<!-- ═══════ BENEFICIOS ═══════ -->
+<section class="seccion">
+  <div class="grid">
+    <div class="card beneficio">
+      <div class="beneficio-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>
+      </div>
+      <h3>Acceso completo</h3>
+      <p>Busca y explora todo el catálogo de Open Library sin límites.</p>
+    </div>
+    <div class="card beneficio">
+      <div class="beneficio-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+      </div>
+      <h3>100% seguro</h3>
+      <p>Tu contraseña se cifra con scrypt + sal. Nunca se almacena en texto plano.</p>
+    </div>
+    <div class="card beneficio">
+      <div class="beneficio-icon">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+      </div>
+      <h3>Rápido y fácil</h3>
+      <p>Solo necesitas nombre, correo y contraseña. Listo en 30 segundos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FORMULARIO ═══════ -->
+<section class="seccion">
+  <form id="f" novalidate>
+    <h2 style="text-align:center;margin-bottom:.5rem;color:var(--navy)">Tus datos</h2>
+    <p style="text-align:center;color:var(--ink-2);font-size:.9rem;margin-bottom:1rem">Todos los campos son obligatorios</p>
+
+    <label for="nombre">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
+      Nombre completo
+    </label>
+    <input type="text" id="nombre" placeholder="Ej: María López García" maxlength="60">
+    <div class="err" data-e="nombre"></div>
+
+    <label for="correo">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+      Correo electrónico
+    </label>
+    <input type="email" id="correo" placeholder="Ej: maria@correo.com" maxlength="100">
+    <div class="err" data-e="correo"></div>
+
+    <label for="password">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"/></svg>
+      Contraseña
+    </label>
+    <input type="password" id="password" placeholder="Mín. 8 caracteres, mayúscula, minúscula y número" maxlength="64">
+    <div class="err" data-e="password"></div>
+
+    <label for="confirmar">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+      Confirmar contraseña
+    </label>
+    <input type="password" id="confirmar" placeholder="Repite tu contraseña" maxlength="64">
+    <div class="err" data-e="confirmar"></div>
+
+    <label><input type="checkbox" id="acepto"> Acepto el aviso de privacidad (solo se usan nombre y correo para tu cuenta)</label>
+    <div class="err" data-e="acepto"></div>
+
+    <p><button class="btn" type="submit">Registrarme</button></p>
+    <p id="msg"></p>
+  </form>
+</section>
+
+<!-- ═══════ SEGURIDAD ═══════ -->
+<section class="seccion">
+  <h2 class="seccion-titulo">
+    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>
+    ¿Cómo protegemos tus datos?
+  </h2>
+  <div class="contenido-doble">
+    <div class="texto-info">
+      <p>Tu seguridad es nuestra prioridad. Estas son las medidas que implementamos:</p>
+      <ul>
+        <li><strong>Hash scrypt + sal</strong> — Tu contraseña nunca se guarda en texto plano. Se genera un hash único e irreversible.</li>
+        <li><strong>Validación doble</strong> — Los datos se validan tanto en tu navegador como en el servidor.</li>
+        <li><strong>Rate limiting</strong> — Limitamos las solicitudes para prevenir ataques de fuerza bruta.</li>
+        <li><strong>Cabeceras de seguridad</strong> — CSP, X-Frame-Options y más para proteger contra XSS y clickjacking.</li>
+        <li><strong>LFPDPPP</strong> — Cumplimos con la Ley Federal de Protección de Datos Personales en Posesión de Particulares.</li>
+      </ul>
+    </div>
+    <div class="video-container">
+      <iframe src="https://www.youtube-nocookie.com/embed/iFPKdJYQB8s?controls=1&fs=1&rel=0&modestbranding=1&playsinline=1" title="Seguridad y contraseñas" frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Lúmina — Proyecto Unidad 3 · Desarrollo Web Integral (UTSLRC)</p>
+  <p>Datos proporcionados por <a href="https://openlibrary.org" target="_blank" rel="noopener noreferrer" style="color:#7eb8ff">Open Library</a></p>
+</footer>
+
+<script>
+const f=document.getElementById('f'),msg=document.getElementById('msg');
+function validar(d){const e={};
+if(!/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,60}$/.test(d.nombre))e.nombre='Solo letras, de 3 a 60 caracteres.';
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.correo))e.correo='Correo no válido.';
+if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,64}$/.test(d.password))e.password='Mínimo 8 caracteres con mayúscula, minúscula y número.';
+if(d.password!==d.confirmar)e.confirmar='Las contraseñas no coinciden.';
+if(!d.acepto)e.acepto='Debes aceptar el aviso de privacidad.';return e}
+function mostrar(e){document.querySelectorAll('[data-e]').forEach(n=>n.textContent=e[n.dataset.e]||'')}
+f.addEventListener('submit',async ev=>{ev.preventDefault();msg.textContent='';
+const d={nombre:nombre.value,correo:correo.value,password:password.value,confirmar:confirmar.value,acepto:acepto.checked};
+const e=validar(d);mostrar(e);if(Object.keys(e).length)return;
+try{const r=await fetch('/api/registro',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)});
+const j=await r.json();if(r.ok){msg.className='ok';msg.textContent='✅ '+j.mensaje;f.reset()}else if(j.errores)mostrar(j.errores);else{msg.className='err';msg.textContent=j.error}}
+catch{msg.className='err';msg.textContent='Error de conexión.'}});
+</script>
+<script src="theme.js"></script>
+</body></html>

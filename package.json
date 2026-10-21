@@ -1,0 +1,8 @@
+{
+  "name": "libreria-digital",
+  "version": "1.0.0",
+  "description": "Librería Digital - Unidad 3: seguridad, web services y APIs",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=20.6" }
+}
