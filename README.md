@@ -1,18 +1,23 @@
+# Lúmina
 
-Proyecto Unidad 3 – Desarrollo Web Integral (UTSLRC). Sitio con Inicio, Registro validado y Catálogo con la API de Open Library.
+Biblioteca digital con catálogo de libros, buscador, registro seguro, videos educativos y clima actual.
 
 ## Ejecutar
-1. Requiere Node.js 20.6 o superior (sin `npm install`, no usa dependencias).
-2. Copia `.env.example` a `.env` y escribe tu correo en `OPENLIBRARY_CONTACT` (Open Library es gratuita y no usa clave, solo pide identificarte).
-3. `npm start` y abre http://localhost:3000
 
-<<<<<<< HEAD
-=======
+1. Requiere Node.js 20.6 o superior. No usa dependencias externas de npm.
+2. Copia `.env.example` como `.env`.
+3. Coloca tu clave gratuita de OpenWeatherMap en `OPENWEATHER_API_KEY`.
+4. Personaliza `OPENWEATHER_CITY` si lo deseas.
+5. Ejecuta `npm start` y abre http://localhost:3000.
+
+## APIs externas
+
+- Open Library: catálogo de libros y portadas mediante `/api/libros`.
+- OpenWeatherMap: clima actual mediante `/api/clima`; la clave se lee solo desde `.env` y nunca se envía al navegador.
+
 ## Seguridad aplicada
-- Datos de configuración en `.env` (en `.gitignore`), usados solo en el servidor (proxy `/api/libros`).
-- Validación en cliente **y** servidor; contraseñas con hash scrypt + sal.
+
+- `.env` está incluido en `.gitignore` y no se sube a GitHub.
+- Validación en cliente y servidor; contraseñas con hash scrypt y sal.
 - Rate limiting, límite de tamaño del body, cabeceras de seguridad y CSP.
-- Salidas escapadas contra XSS; protección contra path traversal.
-# lumina
-# lumina
->>>>>>> d0b1598 (first commit)
+- Salidas escapadas contra XSS y protección contra path traversal.

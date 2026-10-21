@@ -120,6 +120,22 @@
   <p class="texto-centrado">Desde la invención de la imprenta, los libros han sido la herramienta más poderosa para compartir ideas y transformar sociedades.</p>
 </section>
 
+<section class="seccion clima-section">
+  <div class="clima-card">
+    <div>
+      <p class="eyebrow">PARA ACOMPAÑAR TU LECTURA</p>
+      <h2 class="seccion-titulo">¿Qué clima hace hoy?</h2>
+      <p class="clima-desc">Consulta el clima de tu ciudad sin salir de Lúmina.</p>
+    </div>
+    <form class="clima-form" id="clima-form">
+      <label for="ciudad-clima">Ciudad</label>
+      <div class="clima-controls"><input id="ciudad-clima" name="ciudad" placeholder="Ej. Hermosillo, MX" maxlength="80"><button class="btn" type="submit">Consultar</button></div>
+      <p class="clima-estado" id="clima-estado">Escribe una ciudad para consultar el clima.</p>
+    </form>
+    <div class="clima-result" id="clima-result" hidden></div>
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -127,5 +143,6 @@
   <p>Datos de libros proporcionados por <a href="https://openlibrary.org" target="_blank" rel="noopener noreferrer" style="color:#7eb8ff">Open Library</a></p>
 </footer>
 
+<script src="weather.js"></script>
 <script src="theme.js"></script>
 </body></html>
